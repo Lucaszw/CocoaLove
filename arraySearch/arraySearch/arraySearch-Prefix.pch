@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'arraySearch' target in the 'arraySearch' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

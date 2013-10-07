@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'matrixCalcualations' target in the 'matrixCalcualations' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
