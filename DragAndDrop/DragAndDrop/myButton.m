@@ -11,6 +11,7 @@
 @implementation myButton
 - (id)initWithFrame:(NSRect)frame
 {
+    //  define self , and set _isBeingClicked to initally false
     self = [super initWithFrame:frame];
     if (self) {
         _isBeingClicked = false;
@@ -20,6 +21,7 @@
 }
 
 - (void) updateTrackingAreas {
+    // when updateTrackingAreas is called : adkust to match feedback from mouse, and add the new tracking area
     [super updateTrackingAreas];
     
     NSTrackingAreaOptions options = NSTrackingInVisibleRect | NSTrackingMouseMoved | NSTrackingActiveInKeyWindow | NSTrackingMouseEnteredAndExited;
@@ -30,10 +32,12 @@
 
 
 -(void)mouseDown:(NSEvent *)theEvent {
+    // if mouse if down , set _isBeingClicked to true, so that is position is editable
     _isBeingClicked = true;
    
 }
 -(void)mouseUp:(NSEvent *)theEvent {
+    // set being clicked to false...
     _isBeingClicked = false;
 }
 
