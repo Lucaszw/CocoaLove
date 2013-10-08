@@ -15,12 +15,17 @@
 - (IBAction)searchArray:(id)sender {
 //    int myArray2[5];
     
+    // Create string values of each box to run in the matrix
      NSString * const myArray[] = { box1.stringValue, box2.stringValue, box3.stringValue, box4.stringValue, box5.stringValue };
     
+    // Defein const x to represent the value of the search field
     NSString * const x = searchBox.stringValue ;
 
+    
+    // Search via a for loop to mathc x with the correct array value
     for (int i =0; i<5; i++) {
         if (x == myArray[i]){
+            // If found print to console...
             NSLog(@"%s", "found in textbox # :");
             NSLog(@"%d", i+1);
             break; 
